@@ -4,3 +4,4 @@ Break at 10:15 local time
 End break 10:30 local time
 Break continues 10:45 local time - I lied
 Break at 11:00 local time
+AWAKE at 12:45 PM local time ( Day 2)

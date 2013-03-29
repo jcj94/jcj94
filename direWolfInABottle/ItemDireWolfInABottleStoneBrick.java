@@ -14,44 +14,39 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World world, int x, int y, int z, int l, float f, float f1, float f3)
 	{
+		int block = Block.stoneBrick.blockID;
 		int posX = x-4;
 		//System.out.println(posX);
-		int posY = y-1;
+		int posY = y;
 		//System.out.println(posY);
 		int posZ = z-4;
 		//System.out.println(posZ);
 		for(int blocksY = 0; blocksY < 7; blocksY++)
 		{
-			for(int blocksZ = 0; blocksZ < 10; blocksZ++)
+			for(int blocksZ = 0; blocksZ < 9; blocksZ++)
 			{
-				for(int blocksX = 0; blocksX < 10; blocksX++)
+				for(int blocksX = 0; blocksX < 9; blocksX++)
 				{
 					if(blocksY == 0)
 					{
-						world.setBlock(Block.stoneBrick.blockID, posX, posY, posZ);
-						posX++;
-						System.out.println("Placing block at " + posX + ", " + posY + ", " + posZ);
+						world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);	
 					}
 					else if(blocksY > 5)
 					{
-						if(blocksZ < 1 || blocksZ > 9)
+						if(blocksZ < 1 || blocksZ == 9)
 						{
-							world.setBlock(Block.stoneBrick.blockID, posX, posY, posZ);
-							posX++;
+							world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);
 						}
 					}
 					else
 					{
 						if(blocksZ < 1 || blocksZ == 5 || blocksZ > 9)
 						{
-							world.setBlock(Block.stoneBrick.blockID, posX, posY, posZ);
-							posX++;
+							world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);
 						}
 					}
 				}
-				posZ++;
 			}
-			posY++;
 		}
 		return true;
 	}
