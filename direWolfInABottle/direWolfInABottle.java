@@ -1,8 +1,10 @@
 package jcj94.direWolfInABottle;
 
 import jcj94.direWolfInABottle.client.ItemRenderDWIAB;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.common.Mod;
@@ -16,6 +18,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid="Metroid", name="Metroid Mod", version="0.0.0")
@@ -41,8 +44,14 @@ public class direWolfInABottle {
 	@Init
 	public void load(FMLInitializationEvent event) 
 	{
+		
+		GameRegistry.addRecipe(new ItemStack(DWIABSB), "xyx", "yZy", "xyx",
+		        'x', Item.ingotIron, 'y', Block.stoneBrick, 'z', Block.glass);
+		GameRegistry.addRecipe(new ItemStack(DWIABS), "xyx", "yZy", "xyx",
+		        'x', Item.ingotIron, 'y', Block.stone, 'z', Block.glass);
 		proxy.registerRenderers();
 		LanguageRegistry.addName(DWIABSB, "DWIAB - Stone Brick");
+		LanguageRegistry.addName(DWIABS, "DWIAB - Stone");
 		MinecraftForgeClient.registerItemRenderer(this.DWIABSB.itemID, (IItemRenderer)new ItemRenderDWIAB());
 		MinecraftForgeClient.registerItemRenderer(this.DWIABS.itemID, (IItemRenderer)new ItemRenderDWIAB());
 	}

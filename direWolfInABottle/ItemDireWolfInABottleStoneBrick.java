@@ -1,6 +1,7 @@
 package jcj94.direWolfInABottle;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -10,6 +11,10 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 
 	public ItemDireWolfInABottleStoneBrick(int par1) {
 		super(par1);
+	}
+	public void updateIcons(IconRegister iconRegister)
+	{
+	         iconIndex = iconRegister.registerIcon("dwiab:DWIABSB");
 	}
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World world, int x, int y, int z, int l, float f, float f1, float f3)
