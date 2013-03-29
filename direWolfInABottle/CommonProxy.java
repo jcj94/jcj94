@@ -1,8 +1,6 @@
 package jcj94.direWolfInABottle;
 
 public class CommonProxy{
-	public static String ITEMS_PNG = "metroid/textures/items.png";
-	public static String BLOCK_PNG = "metroid/textures/block.png";
 
 	// Client stuff
 	public void registerRenderers() {
