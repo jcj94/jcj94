@@ -10,8 +10,7 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 	public ItemDireWolfInABottleStoneBrick(int par1) {
 		super(par1);
 	}
-	@Override
-	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player)
+	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player, int x, int y, int z)
 	{
 		for(int blocksY = 0; blocksY < 7; blocksY++)
 		{
@@ -23,9 +22,19 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 					{
 					
 					}
-					else if(blocks Y > 5)
+					else if(blocksY > 5)
 					{
-						
+						if(blocksZ < 1 || blocksZ > 9)
+						{
+							
+						}
+					}
+					else
+					{
+						if(blocksZ < 1 || blocksZ == 5 || blocksZ > 9)
+						{
+							
+						}
 					}
 				}
 			}
