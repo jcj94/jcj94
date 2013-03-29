@@ -6,15 +6,15 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemDireWolfInABottleStoneBrick extends Item {
+public class ItemDireWolfInABottleStone extends Item {
 
-	public ItemDireWolfInABottleStoneBrick(int par1) {
+	public ItemDireWolfInABottleStone(int par1) {
 		super(par1);
 	}
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World world, int x, int y, int z, int l, float f, float f1, float f3)
 	{
-		int block = Block.stoneBrick.blockID;
+		int block = Block.stone.blockID;
 		int glass = Block.glass.blockID;
 		int posX = x-4;
 		//System.out.println(posX);
