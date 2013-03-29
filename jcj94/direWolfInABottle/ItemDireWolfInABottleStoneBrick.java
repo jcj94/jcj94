@@ -19,6 +19,10 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World world, int x, int y, int z, int l, float f, float f1, float f3)
 	{
+        if (!player.capabilities.isCreativeMode)
+        {
+            --itemstack.stackSize;
+        }
 		int block = Block.stoneBrick.blockID;
 		int glass = Block.glass.blockID;
 		int posX = x-4;
