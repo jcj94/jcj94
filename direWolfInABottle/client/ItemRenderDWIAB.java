@@ -41,7 +41,7 @@ public class ItemRenderDWIAB implements IItemRenderer
 		{
 		case EQUIPPED:
 		{
-			Minecraft.getMinecraft().renderEngine.bindTexture("/DWIAB.png");
+			Minecraft.getMinecraft().renderEngine.bindTexture("/dwiab/DWIAB.png");
 			if(!((EntityPlayer)data[1] == Minecraft.getMinecraft().renderViewEntity && Minecraft.getMinecraft().gameSettings.thirdPersonView == 0 && !((Minecraft.getMinecraft().currentScreen instanceof GuiInventory || Minecraft.getMinecraft().currentScreen instanceof GuiContainerCreative) && RenderManager.instance.playerViewY == 180.0F)))
 			{
 				GL11.glPushMatrix();
