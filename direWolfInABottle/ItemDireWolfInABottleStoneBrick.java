@@ -11,14 +11,15 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 	public ItemDireWolfInABottleStoneBrick(int par1) {
 		super(par1);
 	}
-	public ItemStack onItemUse(ItemStack itemstack, World world, EntityPlayer player, int x, int y, int z)
+	@Override
+	public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World world, int x, int y, int z, int l, float f, float f1, float f3)
 	{
-		int posX = (int) (player.posX-4);
-		System.out.println(posX);
-		int posY = (int) (player.posY-1);
-		System.out.println(posY);
-		int posZ = (int) (player.posZ-4);
-		System.out.println(posZ);
+		int posX = x-4;
+		//System.out.println(posX);
+		int posY = y-1;
+		//System.out.println(posY);
+		int posZ = z-4;
+		//System.out.println(posZ);
 		for(int blocksY = 0; blocksY < 7; blocksY++)
 		{
 			for(int blocksZ = 0; blocksZ < 10; blocksZ++)
@@ -29,6 +30,7 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 					{
 						world.setBlock(Block.stoneBrick.blockID, posX, posY, posZ);
 						posX++;
+						System.out.println("Placing block at " + posX + ", " + posY + ", " + posZ);
 					}
 					else if(blocksY > 5)
 					{
@@ -51,6 +53,6 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 			}
 			posY++;
 		}
-		return itemstack;
+		return true;
 	}
 }
