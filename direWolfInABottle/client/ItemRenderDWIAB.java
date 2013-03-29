@@ -41,7 +41,7 @@ public class ItemRenderDWIAB implements IItemRenderer
 		{
 		case EQUIPPED:
 		{
-			Minecraft.getMinecraft().renderEngine.bindTexture("/dwiab/DWIAB.png");
+			Minecraft.getMinecraft().renderEngine.bindTexture("/jcj94/direWolfInABottle/model/DWIAB.png");
 			if(!((EntityPlayer)data[1] == Minecraft.getMinecraft().renderViewEntity && Minecraft.getMinecraft().gameSettings.thirdPersonView == 0 && !((Minecraft.getMinecraft().currentScreen instanceof GuiInventory || Minecraft.getMinecraft().currentScreen instanceof GuiContainerCreative) && RenderManager.instance.playerViewY == 180.0F)))
 			{
 				GL11.glPushMatrix();
@@ -52,7 +52,7 @@ public class ItemRenderDWIAB implements IItemRenderer
 
 				GL11.glRotatef(90, 0.00F, 0.00F, 1.00F);
 
-				float scale = 0.50F;
+				float scale = 1.00F;
 
 				GL11.glScalef(scale, scale, scale);	
 
