@@ -21,7 +21,7 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 		//System.out.println(posY);
 		int posZ = z-4;
 		//System.out.println(posZ);
-		for(int blocksY = 0; blocksY < 7; blocksY++)
+		for(int blocksY = 0; blocksY < 6; blocksY++)
 		{
 			for(int blocksZ = 0; blocksZ < 9; blocksZ++)
 			{
@@ -29,20 +29,16 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 				{
 					if(blocksY == 0)
 					{
-						world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);	
-					}
-					else if(blocksY > 5)
-					{
-						if(blocksZ < 1 || blocksZ == 9)
-						{
-							world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);
-						}
+						world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);						
 					}
 					else
 					{
-						if(blocksZ < 1 || blocksZ == 5 || blocksZ > 9)
+						if(blocksZ == 0 || blocksZ == 8)
 						{
+							if(blocksX != 5)
+							{
 							world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);
+							}
 						}
 					}
 				}
