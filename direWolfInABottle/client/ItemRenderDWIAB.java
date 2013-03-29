@@ -29,8 +29,7 @@ public class ItemRenderDWIAB implements IItemRenderer
 	}
 
 	@Override
-	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item,
-			ItemRendererHelper helper) 
+	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper) 
 	{
 		return false;
 	}
@@ -42,7 +41,7 @@ public class ItemRenderDWIAB implements IItemRenderer
 		{
 		case EQUIPPED:
 		{
-			Minecraft.getMinecraft().renderEngine.bindTexture("/direWolfInABottle/model/DWIAB.png");
+			Minecraft.getMinecraft().renderEngine.bindTexture("/DWIAB.png");
 			if(!((EntityPlayer)data[1] == Minecraft.getMinecraft().renderViewEntity && Minecraft.getMinecraft().gameSettings.thirdPersonView == 0 && !((Minecraft.getMinecraft().currentScreen instanceof GuiInventory || Minecraft.getMinecraft().currentScreen instanceof GuiContainerCreative) && RenderManager.instance.playerViewY == 180.0F)))
 			{
 				GL11.glPushMatrix();
