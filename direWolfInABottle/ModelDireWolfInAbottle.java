@@ -1,6 +1,9 @@
 
 package jcj94.direWolfInABottle;
 
+import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.model.ModelRenderer;
+
 public class ModelDireWolfInABottle extends ModelBase
 {
   //fields
