@@ -1,3 +1,4 @@
 Break at 9:45 local time
 Break at 10:00 local time
 Break at 10:15 local time
+End break at 10:30 local time
