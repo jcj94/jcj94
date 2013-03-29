@@ -20,8 +20,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid="Metroid", name="Metroid Mod", version="0.0.0")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class direWolfInABottle {
-	public Item DWIAB = new ItemDireWolfInABottleStoneBrick(6000).setFull3D().setMaxStackSize(1).setCreativeTab(CreativeTabs.tabDecorations).setUnlocalizedName("DireWolfInABottle");
-
+	public Item DWIABSB = new ItemDireWolfInABottleStoneBrick(6000).setFull3D().setMaxStackSize(1).setCreativeTab(CreativeTabs.tabDecorations).setUnlocalizedName("DireWolfInABottleStoneBrick");
+	public Item DWIABS = new ItemDireWolfInABottleStone(6001).setFull3D().setMaxStackSize(1).setCreativeTab(CreativeTabs.tabdecorations).setUnlocalizedName("DirewolfInABottleStone");
 
 	// The instance of your mod that Forge uses.
 	@Instance("Generic")
