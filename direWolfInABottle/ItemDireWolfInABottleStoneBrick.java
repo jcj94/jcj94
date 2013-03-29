@@ -11,9 +11,25 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 		super(par1);
 	}
 	@Override
-    public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player)
-    {
-		
-        return itemstack;
-    }
+	public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer player)
+	{
+		for(int blocksY = 0; blocksY < 7; blocksY++)
+		{
+			for(int blocksZ = 0; blocksZ < 10; blocksZ++)
+			{
+				for(int blocksX = 0; blocksX < 10; blocksX++)
+				{
+					if(blocksY < 1)
+					{
+					
+					}
+					else if(blocks Y > 5)
+					{
+						
+					}
+				}
+			}
+		}
+		return itemstack;
+	}
 }
