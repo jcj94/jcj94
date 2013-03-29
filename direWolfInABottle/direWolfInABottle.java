@@ -1,5 +1,6 @@
 package jcj94.direWolfInABottle;
 
+import jcj94.direWolfInABottle.client.ItemRenderDWIAB;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.IItemRenderer;
@@ -21,7 +22,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class direWolfInABottle {
 	public Item DWIABSB = new ItemDireWolfInABottleStoneBrick(6000).setFull3D().setMaxStackSize(1).setCreativeTab(CreativeTabs.tabDecorations).setUnlocalizedName("DireWolfInABottleStoneBrick");
-	public Item DWIABS = new ItemDireWolfInABottleStone(6001).setFull3D().setMaxStackSize(1).setCreativeTab(CreativeTabs.tabdecorations).setUnlocalizedName("DirewolfInABottleStone");
+	public Item DWIABS = new ItemDireWolfInABottleStone(6001).setFull3D().setMaxStackSize(1).setCreativeTab(CreativeTabs.tabDecorations).setUnlocalizedName("DirewolfInABottleStone");
 
 	// The instance of your mod that Forge uses.
 	@Instance("Generic")
@@ -40,7 +41,10 @@ public class direWolfInABottle {
 	@Init
 	public void load(FMLInitializationEvent event) 
 	{
-		
+		proxy.registerRenderers();
+		LanguageRegistry.addName(DWIABSB, "DWIAB - Stone Brick");
+		MinecraftForgeClient.registerItemRenderer(this.DWIABSB.itemID, (IItemRenderer)new ItemRenderDWIAB());
+		MinecraftForgeClient.registerItemRenderer(this.DWIABS.itemID, (IItemRenderer)new ItemRenderDWIAB());
 	}
 
 	@PostInit

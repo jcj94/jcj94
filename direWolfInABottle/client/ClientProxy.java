@@ -6,7 +6,10 @@ import jcj94.direWolfInABottle.CommonProxy;
 
 public class ClientProxy extends CommonProxy {
 
-	
+	@Override
+	public void initializeRendering() {
+		
+	}
 	@Override
 	public void registerRenderers() 
 	{
