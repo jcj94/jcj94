@@ -1,5 +1,7 @@
 package jcj94.direWolfInABottle.client;
 
+import jcj94.direWolfInABottle.model.ModelDireWolfInABottle;
+
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.glu.Sphere;
 
@@ -17,6 +19,7 @@ public class ItemRenderDWIAB implements IItemRenderer
 
 	public ItemRenderDWIAB()
 	{
+		bottleModel = new ModelDireWolfInABottle();
 	}
 	@Override
 	public boolean handleRenderType(ItemStack item, ItemRenderType type) 
@@ -46,11 +49,11 @@ public class ItemRenderDWIAB implements IItemRenderer
 			{
 				GL11.glPushMatrix();
 
-				GL11.glRotatef(90, 1.00F, 0.00F, 0.00F);
+				GL11.glRotatef(0, 1.00F, 0.00F, 0.00F);
 
-				GL11.glRotatef(130, 0.00F, 1.00F, 0.00F);
+				GL11.glRotatef(0, 0.00F, 1.00F, 0.00F);
 
-				GL11.glRotatef(90, 0.00F, 0.00F, 1.00F);
+				GL11.glRotatef(0, 0.00F, 0.00F, 1.00F);
 
 				float scale = 1.00F;
 
