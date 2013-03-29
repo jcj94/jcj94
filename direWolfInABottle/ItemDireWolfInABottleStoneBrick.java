@@ -35,11 +35,31 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 					{
 						if(blocksZ == 0 || blocksZ == 8)
 						{
-							if(blocksX != 5)
+							if(blocksX != 4 && blocksY < 3)
 							{
-							world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);
+								world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);
+							}
+							else if(blocksY > 2)
+							{
+								world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);
 							}
 						}
+					}
+					for(int blocksZZ = 0; blocksZZ < 9; blocksZZ++)
+					{
+
+						if(blocksZ != 4 && blocksY > 0 && blocksY < 3)
+						{
+							world.setBlock(posX, posY + blocksY, posZ + blocksZ, block);
+							world.setBlock(posX + 8, posY + blocksY, posZ + blocksZ, block);
+						}
+						else if(blocksY > 2)
+						{
+							world.setBlock(posX, posY + blocksY, posZ + blocksZ, block);
+							world.setBlock(posX + 8, posY + blocksY, posZ + blocksZ, block);
+						}
+
+
 					}
 				}
 			}
