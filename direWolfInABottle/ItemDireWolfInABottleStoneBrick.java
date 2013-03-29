@@ -15,6 +15,7 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer player, World world, int x, int y, int z, int l, float f, float f1, float f3)
 	{
 		int block = Block.stoneBrick.blockID;
+		int glass = Block.glass.blockID;
 		int posX = x-4;
 		//System.out.println(posX);
 		int posY = y;
@@ -47,7 +48,6 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 					}
 					for(int blocksZZ = 0; blocksZZ < 9; blocksZZ++)
 					{
-
 						if(blocksZ != 4 && blocksY > 0 && blocksY < 3)
 						{
 							world.setBlock(posX, posY + blocksY, posZ + blocksZ, block);
@@ -58,8 +58,22 @@ public class ItemDireWolfInABottleStoneBrick extends Item {
 							world.setBlock(posX, posY + blocksY, posZ + blocksZ, block);
 							world.setBlock(posX + 8, posY + blocksY, posZ + blocksZ, block);
 						}
+					}
+					if(blocksY == 5)
+					{
+						if(blocksX == 4 || blocksX == 0 || blocksX == 5)
+						{
 
-
+								world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);	
+						}
+						if(blocksZ == 4 || blocksZ == 0 || blocksZ == 8)
+						{
+							world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, block);
+						}
+						else
+						{
+							world.setBlock(posX + blocksX, posY + blocksY, posZ + blocksZ, glass);
+						}
 					}
 				}
 			}
