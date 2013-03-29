@@ -3,3 +3,4 @@ Break at 10:00 local time
 Break at 10:15 local time
 End break 10:30 local time
 Break continues 10:45 local time - I lied
+Break at 11:00 local time
